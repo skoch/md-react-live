@@ -1,11 +1,8 @@
-## Header Demo
-
-```jsx
 import React, { Component } from 'react';
-import { Header } from './Header';
+import { Header } from '../Header';
 
 class HeaderDemo extends Component {
-  private headerTitle = "Demo Header Component";
+  private headerTitle = 'Demo Header Component';
 
   render() {
     return <Header title={this.headerTitle} />;
@@ -13,4 +10,3 @@ class HeaderDemo extends Component {
 }
 
 <HeaderDemo />;
-```
