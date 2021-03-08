@@ -1,0 +1,72 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "eslint-config-blvd/react",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "react/no-danger": "off",
+    "no-console": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/camelcase": "off",
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "__typename"
+        ]
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 80,
+        "ignoreUrls": true
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "react/no-unescaped-entities": [
+      "error",
+      {
+        "forbid": [
+          {
+            "char": ">",
+            "alternatives": [
+              "&gt;"
+            ]
+          },
+          {
+            "char": "}",
+            "alternatives": [
+              "&#125;"
+            ]
+          }
+        ]
+      }
+    ],
+    "prefer-destructuring": [
+      "error",
+      {
+        "object": true,
+        "array": false
+      }
+    ]
+  }
+}

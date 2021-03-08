@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import { Header } from '../Header';
+import React from 'react';
+import { Header } from '../components/Header';
 
-class HeaderDemo extends Component {
-  private headerTitle = 'Demo Header Component';
+class HeaderDemo extends React.Component {
+  private title = 'Class Example';
 
   render() {
-    return <Header title={this.headerTitle} />;
+    return <Header title={this.title} />;
   }
 }
 

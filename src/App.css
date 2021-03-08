@@ -1,3 +1,18 @@
 .App {
   margin: 50px;
 }
+nav {
+  display: flex;
+  flex-direction: column;
+}
+nav a {
+  margin: 5px 0;
+}
+
+code {
+  font-size: 12px;
+}
+
+button {
+  margin: 10px 0;
+}

@@ -9,7 +9,11 @@ First we need to read this file and put the contents of the example files in the
 The most basic of examples; the one that just has the component itself.
 
 ```jsx
-{ "react": "./src/examples/simple-example.tsx" }
+import React from 'react';
+import { Header } from '../components/Header';
+
+<Header title="Simple Header" />;
+
 ```
 
 ## A Function Example
@@ -17,7 +21,16 @@ The most basic of examples; the one that just has the component itself.
 Still quite basic; a function.
 
 ```jsx
-{ "react": "./src/examples/function-example.tsx" }
+import React from 'react';
+import { Header } from '../components/Header';
+
+const HeaderDemo = (): JSX.Element => {
+  const title = 'Function Example';
+  return <Header title={title} />;
+};
+
+<HeaderDemo />;
+
 ```
 
 ## Class Example
@@ -25,5 +38,17 @@ Still quite basic; a function.
 Different flavor; class / React Component
 
 ```jsx
-{ "react": "./src/examples/class-example.tsx" }
+import React from 'react';
+import { Header } from '../components/Header';
+
+class HeaderDemo extends React.Component {
+  private title = 'Class Example';
+
+  render() {
+    return <Header title={this.title} />;
+  }
+}
+
+<HeaderDemo />;
+
 ```
