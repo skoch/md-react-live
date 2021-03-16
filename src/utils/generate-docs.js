@@ -11,7 +11,7 @@ const tree = fromMarkdown(content);
 // visit the code nodes and find the example file
 // visit(tree, 'code', (node: { value: any; meta: null; }) => {
 visit(tree, 'code', node => {
-  const json = JSON.parse(String(node.value));
+  const json = JSON.parse(node.value);
 
   // read the contents
   const exampleContents = fse.readFileSync(json.react, 'utf8');

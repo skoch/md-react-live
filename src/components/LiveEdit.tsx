@@ -34,7 +34,7 @@ export const LiveEdit: React.FC<LiveEditProps> = ({ defaultCode, scope }) => {
       transformers: { before: [insertReturnKeywordTransformer()] },
     }).outputText;
 
-    return `(function() { var exports = {}; ${tCode} })()`;
+    return `(function() { ${tCode} })()`;
   };
 
   const handleToggleTranspiled = () => {

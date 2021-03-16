@@ -4,6 +4,7 @@ export interface CardProps {
   title: string;
   description: string;
 }
+
 export const Card: React.FC<CardProps> = ({ title, description }) => (
   <div
     style={{
