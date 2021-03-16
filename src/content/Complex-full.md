@@ -9,10 +9,19 @@ First we need to read this file and put the contents of the example files in the
 The most basic of examples; the one that just has the component itself.
 
 ```jsx
+/* eslint-disable max-len */
 import React from 'react';
-import { Header } from '../components/Header';
 
-<Header title="Simple Header" />;
+import { Header } from '../components/Header';
+import { Card } from '../components/Card';
+
+<div>
+  <Header title="Header Component" />
+  <Card
+    title="FPO Card"
+    description="Pretium molestie ultricies neque phasellus proin nam lectus lacinia hac varius dictum convallis dui laoreet"
+  />
+</div>;
 
 ```
 
@@ -21,12 +30,22 @@ import { Header } from '../components/Header';
 Still quite basic; a function.
 
 ```jsx
+/* eslint-disable max-len */
 import React from 'react';
+
+import { Card } from '../components/Card';
 import { Header } from '../components/Header';
 
 const HeaderDemo = (): JSX.Element => {
-  const title = 'Function Example';
-  return <Header title={title} />;
+  const headerTitle = 'Header Component';
+  const cardTitle = 'Card';
+  const cardDesc = `Pretium molestie ultricies neque phasellus proin nam lectus lacinia hac varius dictum convallis dui laoreet`;
+  return (
+    <div>
+      <Header title={headerTitle} />
+      <Card title={cardTitle} description={cardDesc} />
+    </div>
+  );
 };
 
 <HeaderDemo />;
@@ -38,14 +57,26 @@ const HeaderDemo = (): JSX.Element => {
 Different flavor; class / React Component
 
 ```jsx
+/* eslint-disable max-len */
 import React from 'react';
+
 import { Header } from '../components/Header';
+import { Card } from '../components/Card';
 
 class HeaderDemo extends React.Component {
-  private title = 'Class Example';
+  private headerTitle = 'Header Component';
+
+  private cardTitle = 'Header Component';
+
+  private cardDesc = `Pretium molestie ultricies neque phasellus proin nam lectus lacinia hac varius dictum convallis dui laoreet`;
 
   render() {
-    return <Header title={this.title} />;
+    return (
+      <div>
+        <Header title={this.headerTitle} />
+        <Card title={this.cardTitle} description={this.cardDesc} />
+      </div>
+    );
   }
 }
 

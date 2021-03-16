@@ -3,3 +3,4 @@ declare module '*.md' {
   export default value;
 }
 
+declare module '@babel/preset-typescript';

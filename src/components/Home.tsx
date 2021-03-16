@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = (): JSX.Element => (
   <main>
@@ -6,6 +7,7 @@ const Home = (): JSX.Element => (
     <nav>
       <Link to="simple">Simple Example</Link>
       <Link to="complex">Complex Example</Link>
+      <Link to="react-view">React View</Link>
     </nav>
   </main>
 );

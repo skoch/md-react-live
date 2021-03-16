@@ -3,8 +3,10 @@ import CommonMark from 'commonmark';
 import { Link } from 'react-router-dom';
 import ReactRenderer, { CodeBlockProps } from 'commonmark-react-renderer';
 
+import { Card } from './Card';
 import { Header } from './Header';
-import { LiveEdit } from '../LiveEdit';
+import { LiveEdit } from './LiveEdit';
+
 import { useMarkdown } from '../utils/useMarkdown';
 
 import markdown from '../content/Simple.md';
@@ -21,7 +23,7 @@ const Simple = (): JSX.Element | null => {
 
       const { literal } = props;
 
-      const scope = { Header };
+      const scope = { Header, Card };
 
       return literal ? <LiveEdit defaultCode={literal} scope={scope} /> : null;
     },

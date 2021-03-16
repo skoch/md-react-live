@@ -4,7 +4,9 @@ import CommonMark from 'commonmark';
 import ReactRenderer, { CodeBlockProps } from 'commonmark-react-renderer';
 
 import * as HeaderModule from './Header';
-import { LiveEdit } from '../LiveEdit';
+import * as CardModule from './Card';
+
+import { LiveEdit } from './LiveEdit';
 import { useMarkdown } from '../utils/useMarkdown';
 
 import markdown from '../content/Complex-full.md';
@@ -12,9 +14,10 @@ import markdown from '../content/Complex-full.md';
 const modules: { [packageName: string]: any } = {
   react: React,
   '../components/Header': HeaderModule,
+  '../components/Card': CardModule,
 };
 
-export function require(moduleName: string): any {
+export function moduleResolver(moduleName: string): any {
   return modules[moduleName];
 }
 const Complex = (): JSX.Element | null => {
@@ -31,11 +34,12 @@ const Complex = (): JSX.Element | null => {
       return literal ? (
         <div
           style={{
-            padding: '10px 0',
-            borderBottom: '1px solid #ddd',
+            padding: '0 0 50px',
+            borderBottom: '5px solid #bababa',
+            marginBottom: '50px',
           }}
         >
-          <LiveEdit defaultCode={literal} scope={{ require }} />
+          <LiveEdit defaultCode={literal} scope={{ require: moduleResolver }} />
         </div>
       ) : null;
     },
