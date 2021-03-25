@@ -1,15 +1,14 @@
-/* eslint-disable max-len */
 import React from 'react';
 
-import { Header } from '../components/Header';
 import { Card } from '../components/Card';
+import { Header } from '../components/Header';
 
-class HeaderDemo extends React.Component {
+class DemoExample extends React.Component {
   private headerTitle = 'Header Component';
 
-  private cardTitle = 'Header Component';
+  private cardTitle = 'Card Component';
 
-  private cardDesc = `Pretium molestie ultricies neque phasellus proin nam lectus lacinia hac varius dictum convallis dui laoreet`;
+  private cardDesc = 'Pretium molestie ultricies neque phasellus proin';
 
   render() {
     return (
@@ -21,4 +20,4 @@ class HeaderDemo extends React.Component {
   }
 }
 
-<HeaderDemo />;
+<DemoExample />;

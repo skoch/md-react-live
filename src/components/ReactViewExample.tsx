@@ -53,13 +53,7 @@ const ReactViewExample = (): JSX.Element | null => {
       console.log('literal:\n', literal);
 
       return literal ? (
-        <div
-          style={{
-            padding: '0 0 50px',
-            borderBottom: '5px solid #bababa',
-            marginBottom: '50px',
-          }}
-        >
+        <div>
           <ReactView
             defaultCode={literal}
             scope={{ require: moduleResolver }}

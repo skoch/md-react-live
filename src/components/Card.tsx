@@ -6,27 +6,8 @@ export interface CardProps {
 }
 
 export const Card: React.FC<CardProps> = ({ title, description }) => (
-  <div
-    style={{
-      padding: '20px',
-      color: '#242322',
-      backgroundColor: '#bababa',
-      maxWidth: '300px',
-    }}
-  >
-    <h4
-      style={{
-        margin: '0',
-      }}
-    >
-      {title}
-    </h4>
-    <p
-      style={{
-        marginBottom: '0',
-      }}
-    >
-      {description}
-    </p>
+  <div className="card">
+    <h4>{title}</h4>
+    <p>{description}</p>
   </div>
 );

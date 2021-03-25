@@ -1,10 +1,10 @@
-# Usage
+## Usage
 
 No matter the format of the examples we must have a React element to render at the end of the examples. During the transplilation, we will be injecting a "return" statement which is necessary for `react-live` to render properly.
 
-First we need to read this file and put the contents of the example files in the place of the linked files. Then we will use the resulting data as markdown to render.
+First, we need to read this markdown file and put the contents of the example files in place of the linked files. Then we will use the resulting markdown file to render the contents of the examples as a live code editor using `react-live`.
 
-## A Simple Example
+### A Simple Example
 
 The most basic of examples; the one that just has the component itself.
 
@@ -12,7 +12,7 @@ The most basic of examples; the one that just has the component itself.
 { "react": "./src/examples/simple-example.tsx" }
 ```
 
-## A Function Example
+### A Function Example
 
 Still quite basic; a function.
 
@@ -20,7 +20,7 @@ Still quite basic; a function.
 { "react": "./src/examples/function-example.tsx" }
 ```
 
-## Class Example
+### Class Example
 
 Different flavor; class / React Component
 

@@ -1,6 +1,6 @@
 {
-  "name": "Demo for React Live with TypeScript",
-  "short_name": "React Live Demo",
+  "name": "",
+  "short_name": "",
   "icons": [
     {
       "src": "/favicon/android-chrome-192x192.png",
@@ -13,8 +13,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#262728",
-  "background_color": "#bababa"
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
 }

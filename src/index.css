@@ -1,39 +1,39 @@
+:root {
+  --foregroundColor: #bababa;
+  --backgroundColor: #262728;
+}
+
+@font-face {
+  font-family: 'Noway';
+  src: url('./fonts/noway/noway-regular-webfont.eot');
+  src: url('./fonts/noway/noway-regular-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/noway/noway-regular-webfont.woff2') format('woff2'),
+    url('./fonts/noway/noway-regular-webfont.woff') format('woff'),
+    url('./fonts/noway/noway-regular-webfont.ttf') format('truetype'),
+    url('./fonts/noway/noway-regular-webfont.svg#nowayregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NowayBold';
+  src: url('./fonts/noway/noway-bold-webfont.eot');
+  src: url('./fonts/noway/noway-bold-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('./fonts/noway/noway-bold-webfont.woff2') format('woff2'),
+    url('./fonts/noway/noway-bold-webfont.woff') format('woff'),
+    url('./fonts/noway/noway-bold-webfont.ttf') format('truetype'),
+    url('./fonts/noway/noway-bold-webfont.svg#nowaybold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Noway;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #242322;
-  color: #bababa;
+  background-color: var(--backgroundColor);
+  color: var(--foregroundColor);
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-a {
-  color: #bababa;
-}
-
-button {
-  color: #bababa;
-  font-weight: 900;
-  font-family: monospace;
-  border: 5px solid #bababa;
-  padding: 10px 20px;
-  display: inline-block;
-  font-size: 14px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  background-color: #242322;
-  margin: 10px;
-}
-
-button:focus {
-  outline: 1px dotted #bababa;
-  outline-offset: 2px;
-}
-

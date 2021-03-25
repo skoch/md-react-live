@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import CommonMark from 'commonmark';
@@ -13,13 +14,14 @@ import markdown from '../content/Complex-full.md';
 
 const modules: { [packageName: string]: any } = {
   react: React,
-  '../components/Header': HeaderModule,
   '../components/Card': CardModule,
+  '../components/Header': HeaderModule,
 };
 
 export function moduleResolver(moduleName: string): any {
   return modules[moduleName];
 }
+
 const Complex = (): JSX.Element | null => {
   const { contents } = useMarkdown(markdown);
   if (!contents) return null;
@@ -27,18 +29,9 @@ const Complex = (): JSX.Element | null => {
   const renderers = {
     CodeBlock: (props: CodeBlockProps) => {
       const { literal } = props;
-      // console.log('language', props.language);
-      // console.log('codeinfo', props.codeinfo);
-      // console.log('literal:\n', props.literal);
 
       return literal ? (
-        <div
-          style={{
-            padding: '0 0 50px',
-            borderBottom: '5px solid #bababa',
-            marginBottom: '50px',
-          }}
-        >
+        <div>
           <LiveEdit defaultCode={literal} scope={{ require: moduleResolver }} />
         </div>
       ) : null;
@@ -54,7 +47,12 @@ const Complex = (): JSX.Element | null => {
   return (
     <main>
       <nav>
-        <Link to="simple">Simple Example</Link>
+        <h3>
+          <Link to="/">React Live with TypeScript</Link>
+        </h3>
+        <Link to="simple">
+          <button type="button">Simple Example</button>
+        </Link>
       </nav>
       <h1>Complex Example</h1>
       {rendered}

@@ -34,7 +34,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "generate-docs": "node ./src/utils/generate-docs.js"
+    "generate-markdown": "node ./src/utils/generate-markdown.js"
   },
   "eslintConfig": {
     "extends": [

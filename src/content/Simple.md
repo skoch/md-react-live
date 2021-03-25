@@ -1,29 +1,43 @@
-# Usage
+## Usage
 
 `scope` is a prop of the `LiveProvider` which contains any Components that are used. In this case, we would need to pass in both the `Header` and `Card` components.
 
-## Simple
+### Simple
 
 ```jsx
 <div>
   <Header title="Header Component" />
-  <Card title="FPO Card" description="Pretium molestie ultricies neque phasellus proin nam lectus lacinia hac varius dictum convallis dui laoreet" />
+  <Card title="Card Component" description="Pretium molestie ultricies neque phasellus proin" />
 </div>
 ```
 
-## Class Example
+### Class Example
 
 ```jsx
-class HeaderDemo extends React.Component {
+class DemoExample extends React.Component {
   render() {
     return (
       <div>
         <Header title="Header Component" />
-        <Card title="FPO Card" description="Pretium molestie ultricies neque phasellus proin nam lectus lacinia hac varius dictum convallis dui laoreet" />
+        <Card title="Card Component" description="Pretium molestie ultricies neque phasellus proin" />
       </div>
     );
   }
 }
 
-<HeaderDemo />;
+<DemoExample />;
+```
+
+### Function Example
+
+```jsx
+const DemoExample = () => {
+    return (
+      <div>
+        <Header title="Header Component" />
+      </div>
+    );
+}
+
+<DemoExample />;
 ```

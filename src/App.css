@@ -1,14 +1,126 @@
 .App {
-  margin: 50px;
+  margin: 20px;
 }
-nav {
+
+main {
+  width: calc(100% - 10px);
+  max-width: 500px;
+  border: 5px solid var(--foregroundColor);
+  border-bottom: none;
   display: flex;
   flex-direction: column;
 }
-nav a {
-  margin: 5px 0;
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin: 20px 0; */
+  padding: 20px 0;
+  /* border-top: 5px solid var(--foregroundColor); */
+  border-bottom: 5px solid var(--foregroundColor);
 }
 
-code {
-  font-size: 12px;
+a {
+  color: var(--foregroundColor);
 }
+
+section {
+  border-bottom: 5px solid var(--foregroundColor);
+}
+nav a {
+  text-decoration: none;
+}
+
+pre {
+  overflow: auto;
+  padding: 20px;
+  margin: 0;
+  background-color: var(--foregroundColor);
+  color: var(--backgroundColor);
+}
+code {
+  font-size: 14px;
+  color: var(--backgroundColor);
+  font-family: monospace;
+}
+
+
+button {
+  color: var(--backgroundColor);
+  font-weight: 900;
+  border: 5px solid var(--foregroundColor);
+  padding: 5px 15px;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: var(--foregroundColor);
+  margin: 20px;
+  font-family: Noway;
+}
+
+button:focus {
+  outline: 1px dotted var(--foregroundColor);
+  outline-offset: 2px;
+}
+
+button:hover {
+  /* border: 5px solid var(--foregroundColor); */
+  background-color: var(--backgroundColor);
+  color: var(--foregroundColor);
+}
+
+nav button {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: NowayBold;
+  padding: 0 20px;
+  line-height: 1;
+}
+
+p {
+  padding: 0 20px;
+}
+
+p code {
+  background: var(--foregroundColor);
+  padding: 1px 3px;
+}
+
+/* live edit */
+.bordered {
+  border-top: 5px solid var(--foregroundColor);
+  border-bottom: 5px solid var(--foregroundColor);
+}
+
+.preview-wrapper {
+  padding: 20px;
+}
+
+/* components */
+.card {
+  padding: 20px;
+  color: var(--backgroundColor);
+  background-color: var(--foregroundColor);
+}
+
+.card h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.card p {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+h1.header {
+  padding: 0;
+}
+/*
+::selection {
+  color: var(--backgroundColor);
+  background-color: var(--foregroundColor);
+} */

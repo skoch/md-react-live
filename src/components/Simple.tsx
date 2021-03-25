@@ -17,15 +17,15 @@ const Simple = (): JSX.Element | null => {
 
   const renderers = {
     CodeBlock: (props: CodeBlockProps) => {
-      // console.log('language', props.language);
-      // console.log('codeinfo', props.codeinfo);
-      // console.log('literal:\n', props.literal);
-
       const { literal } = props;
 
       const scope = { Header, Card };
 
-      return literal ? <LiveEdit defaultCode={literal} scope={scope} /> : null;
+      return literal ? (
+        <div>
+          <LiveEdit defaultCode={literal} scope={scope} />
+        </div>
+      ) : null;
     },
   };
 
@@ -38,7 +38,12 @@ const Simple = (): JSX.Element | null => {
   return (
     <main>
       <nav>
-        <Link to="complex">Complex Example</Link>
+        <h3>
+          <Link to="/">React Live with TypeScript</Link>
+        </h3>
+        <Link to="complex">
+          <button type="button">Complex Example</button>
+        </Link>
       </nav>
       <h1>Simple Example</h1>
       {rendered}
